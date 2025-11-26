@@ -4,6 +4,7 @@ from app.core.config import settings
 from app.db.session import engine
 from app.db.base import Base
 from app.todo import router as todo_router
+from app.auth import routes as auth_routes
 from app.middleware.request_id_middleware import RequestIDMiddleware
 from app.middleware.logging_middleware import LoggingMiddleware
 
@@ -24,6 +25,7 @@ app.add_middleware(LoggingMiddleware)
 def on_startup():
     Base.metadata.create_all(bind=engine)
 
+app.include_router(auth_routes.router, prefix=f"{settings.API_PREFIX}/{settings.API_VERSION}")
 app.include_router(todo_router, prefix=f"{settings.API_PREFIX}/{settings.API_VERSION}/todos", tags=["todos"])
 
 @app.get("/health")
