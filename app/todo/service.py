@@ -7,7 +7,6 @@ from app.todo.models import User, UserCreate, Todo, TodoCreate, TodoUpdate
 from app.core.config import settings
 
 def _hash_password(password: str) -> str:
-    # Simple SHA-256 + secret as salt (use passlib/bcrypt in prod)
     return hashlib.sha256((settings.SECRET_KEY + password).encode()).hexdigest()
 
 def create_user(db: Session, payload: UserCreate) -> User:

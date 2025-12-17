@@ -1,5 +1,6 @@
 import logging
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.db.session import engine
 from app.db.base import Base
@@ -16,6 +17,15 @@ logging.basicConfig(
 )
 
 app = FastAPI(title=settings.APP_NAME)
+
+# Add CORS middleware (must be before other middlewares)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # React dev server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Add middlewares (order matters: RequestID before Logging)
 app.add_middleware(RequestIDMiddleware)
