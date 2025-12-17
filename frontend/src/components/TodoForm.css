@@ -1,0 +1,30 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2rem;
+}
+
+.todo-form-input {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .todo-form-input {
+    flex: 1;
+  }
+}
+
+
+
+

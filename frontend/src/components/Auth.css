@@ -1,0 +1,126 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #0f1116;
+}
+
+.auth-card {
+  background: #111218;
+  border: 1px solid #1f222d;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 36px;
+  color: #f5f5f5;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d8d8dd;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #2d303b;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #181a21;
+  color: #f8f8f8;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffffff;
+  background: #1c1f27;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder {
+  color: #7a7c86;
+}
+
+.error-message {
+  background-color: rgba(220, 53, 69, 0.15);
+  color: #ff6b7a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background: #e6e6e6;
+  color: #0b0c10;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  margin-top: 8px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #d2d2d2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.16);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #2f323d;
+  color: #9b9ca3;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 24px;
+  color: #a8a8b0;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #f0f0f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.auth-link a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+
+
+
